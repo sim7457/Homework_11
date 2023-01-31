@@ -74,7 +74,70 @@
 #header .main_gnb .inner .gnb ul li {
     font-size: 18px;
     font-weight: 500;
+
+    position: relative;
 }
+
+#header .main_gnb .inner .gnb ul li a:hover {
+    color: rgb(0, 130, 80);
+}
+
+#header .main_gnb .inner .gnb ul li a {
+    display: block;
+}
+
+#header .main_gnb .inner .gnb .sub_gnb {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    line-height: 10px;
+    width: 150px;
+    z-index: 999;
+    transform: translate(-50%, 0);
+    margin: 35px 0 0 0;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#header .main_gnb .inner .gnb .sub_gnb li {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#header .main_gnb .inner .gnb .sub_gnb li:hover {
+    color: rgb(0, 130, 80);
+}
+
+#header .main_gnb .inner:hover .gnb>ul>li .sub_gnb {
+    height: 330px;
+}
+
+#header .main_gnb::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+    transition: 0.5s;
+
+}
+
+#header .main_gnb:hover::before {
+    height: 380px;
+}
+
 
 /* header */
 #mainVisual {
@@ -244,6 +307,8 @@
     color: #2c9149;
     transition: 0.2s;
 }
+
+/* main */
 
 #footer {
     width: 100%;
