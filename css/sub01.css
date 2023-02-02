@@ -36,6 +36,11 @@
     transition: 0.5s;
 }
 
+#s_menu ul .on a {
+    background: #009f65;
+    color: #fff;
+}
+
 #main_pg {
     padding-top: 50px;
 }
